@@ -1,5 +1,7 @@
 # Hello World
 
+**100% Public Domain!**
+
 ## bash
 
 ```sh
@@ -24,4 +26,22 @@ npm start
 
 ```sh
 pwsh hello-world.ps1
+```
+
+## Rust
+
+```sh
+cargo run
+```
+
+## Go
+
+```sh
+go run hello-world.go
+```
+
+## Makefile
+
+```sh
+make hello
 ```
