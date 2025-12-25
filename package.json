@@ -1,0 +1,29 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "mkdir -p public/libs && esbuild node_modules/highlight.js/lib/index.js --bundle --outfile=public/libs/highlight.js --global-name=hljs --minify && cp node_modules/highlight.js/styles/atom-one-dark.css public/libs/atom-one-dark.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/copi143/hello-world.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/copi143/hello-world/issues"
+  },
+  "homepage": "https://github.com/copi143/hello-world#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "highlight.js": "^11.11.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2"
+  }
+}

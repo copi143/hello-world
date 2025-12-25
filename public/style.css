@@ -1,0 +1,146 @@
+body, html {
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: #0f0;
+    background-color: #000;
+
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+body::before {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    content: " ";
+    pointer-events: none;
+
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+}
+
+.fullscreen-center {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    transition: opacity 0.5s ease-out;
+
+    background-color: #000;
+}
+
+#intro-text {
+    text-align: center;
+    white-space: pre-wrap;
+    text-transform: uppercase;
+
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0;
+
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.fullscreen-code {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.hidden {
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+#code-header {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+
+    color: #0f0;
+    border-bottom: 1px solid #0f0;
+    text-shadow: 0 0 2px #0f0;
+
+    font-size: 1.2rem;
+}
+
+pre {
+    overflow: hidden;
+    flex: 1;
+
+    margin: 0;
+
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+#code-content {
+    display: block;
+
+    color: #ccc;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.code-line {
+    display: block;
+
+    transform: translateX(-20px);
+    animation: slideIn 0.1s forwards;
+
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+
+        opacity: 1;
+    }
+}
+
+.cursor {
+    display: inline-block;
+
+    width: 10px;
+    height: 1.2em;
+
+    animation: blink 1s step-end infinite;
+    vertical-align: text-bottom;
+
+    background-color: #0f0;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
