@@ -2,7 +2,12 @@
 .vscode
 .idea
 .cache
+__pycache__
+
 /target
 /build
 /node_modules
 /public/libs
+/dist
+
+*.egg-info

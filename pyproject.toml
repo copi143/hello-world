@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-world"
+version = "0.1.0"
+description = "Hello, World!"
+readme = "README.md"
+license = { text = "CC0-1.0" }
+authors = [{ name = "copi143", email = "copi143@outlook.com" }]
+keywords = []
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/copi143/hello-world"
+Issues = "https://github.com/copi143/hello-world/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
